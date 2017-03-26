@@ -1,3 +1,6 @@
+package com.hnka;
+import java_cup.sym;
+
 %%
 
 /* JFLEX DEFINITIONS */
@@ -10,32 +13,33 @@
 %class MiniJavaLexer
 
 %{
-String reservedWordMessage = "Reached a reserved word ";
-String operatorMessage = "Operator Token ";
-String delimiterMessage = "Delimiter or Punctuation Token ";
-String identifierMessage = "Identifier Token ";
-String literalIntegerMessage = "Literal Integer Token ";
-String defaultMessage = "Token ";
+String reservedWordMessage = "Reserved Word Token [ ";
+String operatorMessage = "Operator Token [ ";
+String delimiterMessage = "Delimiter or Punctuation Token [ ";
+String identifierMessage = "Identifier Token [ ";
+String literalIntegerMessage = "Literal Integer Token [ ";
+String defaultMessage = "Token [ ";
+String closingBrackets = " ]";
 
 public void reachedPrintableToken (String token, String type) {
  switch (type) {
     case "reservedWord":
-        System.out.println(reservedWordMessage + token);
+        System.out.println(reservedWordMessage + token + closingBrackets);
         break;
     case "operator":
-        System.out.println(operatorMessage + token);
+        System.out.println(operatorMessage + token + closingBrackets);
         break;
     case "delimiter":
-        System.out.println(delimiterMessage + token);
+        System.out.println(delimiterMessage + token + closingBrackets);
         break;
     case "identifier":
-        System.out.println(identifierMessage + token);
+        System.out.println(identifierMessage + token + closingBrackets);
         break;
     case "literalInteger":
-        System.out.println(literalIntegerMessage + token);
+        System.out.println(literalIntegerMessage + token + closingBrackets);
         break;
     default:
-        System.out.println(defaultMessage + token);
+        System.out.println(defaultMessage + token + closingBrackets);
  }
 }
 %}
@@ -44,28 +48,27 @@ public void reachedPrintableToken (String token, String type) {
 
 lineTerminator = \r|\n|\r\n
 inputCharacter = [^\r\n]
-whiteSpace = {lineTerminator} | [ \t\f]
+whiteSpace = {lineTerminator}|[ \t\f]
 
-inlineComment = "//" {inputCharacter}* ~{lineTerminator}?
+inlineComment = "//" ~{lineTerminator}
 multipleLinesComment = "/*" ~"*/"
-comment = {inlineComment} | {multipleLinesComment}
+comment = {inlineComment}|{multipleLinesComment}
 
-reservedWords = "boolean" | "class" | "public" | "extends" | "static" | "void" | "main" | "String" | "int" | "while" | "if" | "else" | "return" | "length" | "true" | "false" | "this" | "new" | "System.out.println"
-operators = "&&" | "<" | "==" | "!=" | "+" | "-" | "*" | "!"
-delimiters = ";" | "." | "," | "=" | "(" | ")" | "{" | "}" | "[" | "]"
+reservedWords = "boolean"|"class"|"public"|"extends"|"static"|"void"|"main"|"String"|"int"|"while"|"if"|"else"|"return"|"length"|"true"|"false"|"this"|"new"|"System.out.println"
+operators = "&&"|"<"|"=="|"!="|"+"|"-"|"*"|"!"
+delimiters = ";"|"."|","|"="|"("|")"|"{"|"}"|"["|"]"
 
 letter = [A-Za-z]
 digit = [0-9]
+zero = [0]
 notZeroDigit = [1-9]
 underline = [_]
 customAlphanumeric = {letter}|{digit}|{underline}
-firstIdentifier = {underline} | {letter}
+firstIdentifier = {underline}|{letter}
 identifiers = {firstIdentifier}({customAlphanumeric})*
 
 integer = {digit}*
-literalInteger = {notZeroDigit}({integer})
-
-//treat reserved words identifiers?
+literalInteger = ({notZeroDigit}{integer})|{zero}
 
 %%
 
@@ -73,7 +76,7 @@ literalInteger = {notZeroDigit}({integer})
 
 {reservedWords} { reachedPrintableToken(yytext(), "reservedWord"); }
 {operators} { reachedPrintableToken(yytext(), "operator"); }
-{delimiters} { reachedPrintableToken(yytext(), "delimeter"); }
+{delimiters} { reachedPrintableToken(yytext(), "delimiter"); }
 {identifiers} { reachedPrintableToken(yytext(), "identifier"); }
 {literalInteger} { reachedPrintableToken(yytext(), "literalInteger"); }
 {comment} { /* do nothing */ }
