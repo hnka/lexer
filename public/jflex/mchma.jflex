@@ -47,7 +47,6 @@ public void reachedPrintableToken (String token, String type) {
 /* PATTERNS */
 
 lineTerminator = \r|\n|\r\n
-inputCharacter = [^\r\n]
 whiteSpace = {lineTerminator}|[ \t\f]
 
 inlineComment = "//" ~{lineTerminator}
