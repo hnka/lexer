@@ -2,15 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7d43b48e-6ae9-4356-9981-d6dab210e56f" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/BinarySearch.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/BinaryTree.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/BubbleSort.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/Factorial.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/LinearSearch.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/LinkedList.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/QuickSort.java" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/input.txt" afterPath="$PROJECT_DIR$/public/input.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/hnka/MiniJavaAST.java" afterPath="$PROJECT_DIR$/src/com/hnka/MiniJavaAST.java" />
     </list>
     <ignored path="lexical-analyzer.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -113,12 +105,24 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="workspace.xml" pinned="false" current-in-tab="true">
+      <file leaf-file-name="workspace.xml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="-18765">
               <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="MiniJavaAST.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/com/hnka/MiniJavaAST.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="405">
+              <caret line="27" column="8" selection-start-line="27" selection-start-column="8" selection-end-line="27" selection-end-column="8" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -143,7 +147,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/com/hnka/ast/ArrayLength.java" />
         <option value="$PROJECT_DIR$/src/com/hnka/ast/ArrayLookup.java" />
         <option value="$PROJECT_DIR$/src/com/hnka/ast/Assign.java" />
         <option value="$PROJECT_DIR$/src/com/hnka/ast/Block.java" />
@@ -179,7 +182,6 @@
         <option value="$PROJECT_DIR$/src/com/hnka/ast/VarDecl.java" />
         <option value="$PROJECT_DIR$/src/com/hnka/ast/While.java" />
         <option value="$PROJECT_DIR$/public/input.txt" />
-        <option value="$PROJECT_DIR$/src/com/hnka/MiniJavaAST.java" />
         <option value="$PROJECT_DIR$/public/antlr/Teste.g4" />
         <option value="$PROJECT_DIR$/src/com/hnka/bnf/TesteBaseListener.java" />
         <option value="$PROJECT_DIR$/src/com/hnka/bnf/TesteBaseVisitor.java" />
@@ -194,6 +196,8 @@
         <option value="$PROJECT_DIR$/gen/TesteParser.java" />
         <option value="$PROJECT_DIR$/gen/TesteVisitor.java" />
         <option value="$PROJECT_DIR$/.gitignore" />
+        <option value="$PROJECT_DIR$/.idea/workspace.xml" />
+        <option value="$PROJECT_DIR$/src/com/hnka/MiniJavaAST.java" />
       </list>
     </option>
   </component>
@@ -1044,16 +1048,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/hnka/MiniJavaAST.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="465">
-          <caret line="31" column="51" selection-start-line="31" selection-start-column="51" selection-end-line="31" selection-end-column="51" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/public/antlr/Teste.g4">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="60">
@@ -1193,6 +1187,16 @@
         <state relative-caret-position="-18765">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/hnka/MiniJavaAST.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="405">
+          <caret line="27" column="8" selection-start-line="27" selection-start-column="8" selection-end-line="27" selection-end-column="8" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

@@ -25,11 +25,7 @@ public class MiniJavaAST {
         CommonTokenStream token = new CommonTokenStream(lexer);
         TesteParser parser = new TesteParser(token);
 
-        ParseTree tree = parser.r();
-        ParseTreeWalker walker = new ParseTreeWalker();
-        walker.walk(new TesteBaseListener(), tree);
-        System.out.println();
-        walker.walk(new TesteBaseListener(), tree);
+        parser.r();
 
     }
 }
